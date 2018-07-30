@@ -1,0 +1,372 @@
+p {
+  margin: 0px;
+  font-size: 14px;
+  font-family: Roboto-regular, 'Helvetica Neue', sans-serif;
+}
+
+hr {
+  margin: 0px;
+}
+
+.btn {
+  border-radius: 30px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+  outline: none;
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background: #e6e6e6;
+}
+
+.btn-space {
+  margin-right: 7px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.btn-transparent {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  margin-left: 0px;
+}
+
+.display {
+  display: inline-block;
+}
+
+.msg-container {
+  padding: 10px 0px 5px 0px;
+  overflow: hidden;
+  display: flex; // background: red;
+}
+
+.avatar img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: block;
+  border: 1px solid #edeeef;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+}
+
+.msg-container .avatar {
+  width: auto;
+  height: auto;
+  display: inline-flex;
+  align-items: flex-start;
+}
+
+.msg-container .avatar .user {
+  margin-left: 5px;
+  margin-right: 20px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #edeeef;
+}
+
+.msg-container .user {
+  .user_default {
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 22px;
+    border: 1px solid #edeeef;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    background: #7a76a0;
+    display: flex;
+    i {
+      margin: 4px 8px;
+      vertical-align: middle;
+    }
+  }
+  .circle {
+    border-radius: 50%;
+    object-fit: contain;
+    height: auto;
+    width: auto;
+    box-shadow: none;
+    border: 0;
+  }
+}
+
+.msg-container .avatar .assistant {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.warning-action {
+  color: #d01010;
+}
+
+.primary-action {
+  color: #107f10;
+}
+
+.warning-action:hover {
+  background: rgba(245, 0, 0, 0.3);
+}
+
+.primary-action:hover {
+  background: rgba(109, 239, 109, 0.2);
+}
+
+// .timer {
+//   padding-bottom: 5px;
+// }
+.access_time {
+  /* position: relative; */
+  margin-right: 5px;
+  color: #ccc;
+  font-size: 13px; // font-family: Roboto, "Helvetica Neue", sans-serif;
+  width: 13px;
+  height: 13px;
+  font-weight: 900;
+  vertical-align: middle;
+  display: inline-block;
+  /* float: left; */
+}
+
+.checkmark {
+  float: right;
+  margin-right: 3px;
+  margin-top: 3px;
+  color: #ccc;
+  font-size: 16px;
+  width: 13px;
+  height: 13px;
+  font-weight: 50;
+  /* vertical-align: middle; */
+  /* display: inline-block; */
+}
+
+.messages {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  min-width: 90px;
+  .default_message {
+    // display: inline;
+    .message_text {
+      font-size: 14px;
+      line-height: 18px;
+      padding-right: 15px;
+    }
+    .timestamp {
+      float: right;
+      font-size: 10px;
+      margin-top: 9px;
+      font-weight: 700;
+      color: #acb1b3;
+      // position: absolute;
+      // right: 10px;
+      // bottom: 2px;
+    }
+  }
+}
+
+.base-sent {
+  float: right;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.base-receive {
+  float: right;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0px;
+  padding-right: 0px;
+  float: left;
+}
+
+.msg-receive {
+  width: auto;
+  max-width: calc(100% - 73px);
+  padding-right: 10px;
+  padding-left: 15px;
+  padding-bottom: 7px;
+  background: white;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #edeeef;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.msg-sent {
+  width: auto;
+  height: auto;
+  max-width: calc(100% - 75px);
+  background: #f4f7f9;
+  padding-right: 10px;
+  padding-left: 15px;
+  padding-bottom: 7px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #edeeef;
+  margin-left: auto;
+  margin-right: 5px;
+}
+
+mat-card {
+  padding: 0px;
+}
+
+.mycard {
+  width: calc(100% - 25px);
+  margin: auto !important;
+  .mat-card-content {
+    margin: 0px;
+    padding: 0px;
+    .card-text {
+      padding: 6px 12px;
+    }
+  }
+}
+
+.card-receive {
+  background: transparent;
+  border: 0px solid transparent;
+}
+
+.card-image-block {
+  position: relative;
+  .card-image {
+    width: 100%;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .card-title {
+    color: white;
+    padding-left: 0px;
+    bottom: 12px;
+    left: 12px;
+    font-size: 15px;
+    position: absolute;
+  }
+}
+
+.card-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.title-card {
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  margin: auto;
+}
+
+.card-subtitle {
+  color: white;
+  padding-left: 20px;
+  padding-bottom: 5px;
+  font-size: 12px;
+}
+
+.card-button {
+  width: 100%;
+  text-align: left;
+}
+
+.initial_suggestions {
+  background: rgba(196, 192, 192, 0.45);
+  font-size: 17px;
+  font-family: Roboto-regular, 'Helvetica Neue', sans-serif;
+  border-radius: 15px;
+  display: inline-block;
+  margin-right: 7px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.initial_suggestions:hover {
+  background: rgb(138, 136, 136);
+}
+
+// for card action buttons
+.liked {
+  color: blue;
+}
+
+.un-like {
+  color: black;
+}
+
+.bookmarked {
+  color: blue;
+}
+
+.un-bookmarked {
+  color: black;
+}
+
+.email_list {
+  width: 92%;
+  height: auto;
+  position: relative;
+  right: -3px;
+  margin-left: 10px;
+  margin-right: 10px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+  .email_item {
+    background: white;
+    .email_subject {
+      width: fit-content;
+      padding: 10px 15px 2px 15px;
+      font-size: 15px;
+      color: black;
+    }
+    .email_sender {
+      padding: 3px 15px 2px 15px;
+      font-size: 12px;
+      color: grey;
+    }
+    .email_received_time {
+      float: right;
+      padding-right: 15px;
+      font-size: 12px;
+      font-family: Roboto-regular, 'Helvetica Neue', sans-serif;
+      color: grey;
+      margin-top: 2px;
+    }
+    .email_body {
+      word-wrap: break-word;
+      padding: 2px 15px 10px 15px;
+      font-size: 12px;
+      color: grey;
+    }
+  }
+  .show_more_button {
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    .arrow_button {
+      vertical-align: middle;
+    }
+  }
+}

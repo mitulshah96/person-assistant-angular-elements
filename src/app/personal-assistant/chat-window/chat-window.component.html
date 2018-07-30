@@ -1,0 +1,64 @@
+<div class="chat-window-container">
+
+  <div class="chat-window">
+    <div class="panel-container" [class.reduce]="!isAssistantOpen">
+
+      <div [@toggleAnimation]="assistantState" class="panel panel-default" [ngClass]="{'window-closed': !isAssistantOpen, 'window-open': isAssistantOpen, 'first-load': isFirstLoad}">
+
+        <!-- top bar -->
+        <div class="panel-heading top-bar">
+          <div class="panel-title-container">
+            <h1 class="panel-title">
+              <mat-icon class="header-comment-icon">mode_comment</mat-icon>
+              <b> Personal Assistant</b>
+            </h1>
+          </div>
+          <div class="panel-buttons-container">
+            <mat-icon class="minimize_icon" (click)="toggleAssistant(false)">remove</mat-icon>
+            <mat-icon class="close_icon" (click)="toggleAssistant(true)">clear</mat-icon>
+
+          </div>
+        </div>
+        <div class="parent_container">
+          <!-- chat window -->
+          <div class="panel-body msg-container-base" [perfectScrollbar]="config">
+
+            <div class="today_date">{{ todayDate | date: ' MMMM d, y' | uppercase }}</div>
+            <app-chat-message *ngFor="let message of messages$ | async" [message]="message" (msgLoading)="changeStatus()">
+            </app-chat-message>
+            <div class="loading_animation" *ngIf="isLoading">
+              <div class="avatar">
+                <div class="user">
+                  <img [src]="botImage">
+                </div>
+              </div>
+              <div id="wave">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- user input -->
+        <div class="panel-footer">
+          <div class="input-group">
+            <div id="textarea-container">
+              <textarea class="textarea" placeholder="Type your message here..." (keydown.enter)="onEnter($event)" [(ngModel)]="textFieldValue">
+              </textarea>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="assistant_toggle_button">
+      <button mat-fab disableRipple (click)="toggleAssistant(true)" class="assistant-button">
+        <mat-icon class="mat_icons" [ngClass]="{'assistant-open': isAssistantOpen, 'assistant-closed': !isAssistantOpen}">{{isAssistantOpen ? 'close' : 'message'}}
+        </mat-icon>
+      </button>
+    </div>
+
+  </div>
+</div>

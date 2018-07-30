@@ -1,0 +1,113 @@
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin rotate( $degrees ) {
+  -webkit-transform: rotate(#{$degrees}deg);
+  -moz-transform: rotate(#{$degrees}deg);
+  -ms-transform: rotate(#{$degrees}deg);
+  -o-transform: rotate(#{$degrees}deg);
+  transform: rotate(#{$degrees}deg);
+ }
+
+ @mixin transformModal( $translate, $scale ) {
+  // -webkit-transform: rotate(#{$degrees}deg);
+  // -moz-transform: rotate(#{$degrees}deg);
+  // -ms-transform: rotate(#{$degrees}deg);
+  // -o-transform: rotate(#{$degrees}deg);
+  // transform: rotate(#{$degrees}deg);
+  -webkit-transform: translate($translate ) scale($scale) ;
+  -moz-transform: translate($translate ) scale($scale) ;
+  -ms-transform: translate($translate ) scale($scale) ;
+  -o-transform: translate($translate )  scale($scale) ;
+  transform: translate($translate ) scale($scale) ;   
+ }
+
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+       -moz-transition: $transition-property $transition-time $method;
+        -ms-transition: $transition-property $transition-time $method;
+         -o-transition: $transition-property $transition-time $method;
+            transition: $transition-property $transition-time $method;
+}
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+@mixin animate-dalay($time) {
+  -webkit-animation-delay: $time;
+     -moz-animation-delay: $time;
+       -o-animation-delay: $time;
+      -ms-animation-delay: $time;
+}
+@mixin animation ($delay, $duration, $animation) {
+  -webkit-animation-delay: $delay;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-name: $animation;
+  -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+  -moz-animation-delay: $delay;
+  -moz-animation-duration: $duration;
+  -moz-animation-name: $animation;
+  -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+  -o-animation-delay: $delay;
+  -o-animation-duration: $duration;
+  -o-animation-name: $animation;
+  -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $animation;
+  animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+}
+@mixin keyframe ($animation_name) {
+  @-webkit-keyframes #{$animation_name} {
+      @content;
+  }
+
+  @-moz-keyframes #{$animation_name} {
+      @content;
+  }
+
+  @-o-keyframes #{$animation_name} {
+      @content;
+  }
+
+  @keyframes #{$animation_name} {
+      @content;
+  }
+}
+@mixin backface-visibility($backface) {
+  -webkit-backface-visibility: $backface;
+     -moz-backface-visibility: $backface;
+       -o-backface-visibility: $backface;
+      -ms-backface-visibility: $backface;
+}
+@mixin transform-translate($translate) {
+  -webkit-backface-visibility: $translate;
+     -moz-backface-visibility: $translate;
+       -o-backface-visibility: $translate;
+      -ms-backface-visibility: $translate;
+}
+@mixin transition-duration($duration) {
+  -webkit-transition-duration: $duration;
+     -moz-transition-duration: $duration;
+       -o-transition-duration: $duration;
+      -ms-transition-duration: $duration;
+}
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); /*IE8*/
+}
